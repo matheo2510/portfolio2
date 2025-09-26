@@ -1,0 +1,22 @@
+[
+  {
+    "titre": "Traducteur français",
+    "fichier": "projets/projet1.html",
+    "description": "Un traducteur interactif qui traduit du français vers plusieurs langues (anglais, allemand, espagnol, danois) et peut apprendre de nouveaux mots."
+  },
+  {
+    "titre": "Pierre - Feuille - Ciseaux",
+    "fichier": "projets/projet2.html",
+    "description": "Le classique jeu contre l'ordinateur, avec système de score, codé en Python et jouable dans le navigateur."
+  },
+  {
+    "titre": "Stage",
+    "fichier": "projets/projet3.html",
+    "description": "À venir..."
+  },
+  {
+    "titre": "Atelier 2",
+    "fichier": "projets/projet4.html",
+    "description": "À venir..."
+  }
+]

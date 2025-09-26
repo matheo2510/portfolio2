@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - Étudiant en informatique</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f9;
+      color: #333;
+    }
+
+    header {
+      background: #4A90E2;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 4px solid #357ABD;
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      margin: 10px 0 5px 0;
+      font-size: 32px;
+    }
+
+    header h2 {
+      margin: 0;
+      font-weight: normal;
+      font-size: 18px;
+      color: #e0e0e0;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #4A90E2;
+      border-left: 6px solid #4A90E2;
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 20px;
+      margin: 20px 0;
+      border-left: 3px solid #4A90E2;
+    }
+    .timeline div {
+      margin-bottom: 20px;
+      padding-left: 15px;
+    }
+    .timeline div::before {
+      content: "●";
+      color: #4A90E2;
+      position: absolute;
+      margin-left: -23px;
+    }
+
+    /* Projets */
+    .projets {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .projet {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .projet:hover {
+      background: #eaf3ff;
+      border-color: #4A90E2;
+    }
+    .projet a {
+      text-decoration: none;
+      color: #4A90E2;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f0f0f0;
+      border-top: 1px solid #ccc;
+    }
+
+    footer a {
+      color: #4A90E2;
+      text-decoration: none;
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    form button {
+      background: #4A90E2;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: #357ABD;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="docs/photo.png" alt="Photo de profil">
+    <h1>Mathéo canaple</h1>
+    <h2>Étudiant en informatique – Développement d’applications (SLAM)</h2>
+  </header>
+
+  <main>
+    <section>
+      <h2>À propos de moi</h2>
+      <p>
+        J'ai d'abord passé un baccalauréat professionnel, option A :
+          gestion et animation de l'espace commercial, que j'ai obtenu avec mention
+          assez bien. Je poursuis
+          maintenant ce BTS par passion pour l'informatique et le développement.
+      </p>
+    </section>
+
+    <section>
+      <h2>Mon parcours</h2>
+      <div class="timeline">
+        <div><b>2022 :</b> Bac pro commerce et vente option A </div>
+        <div><b>2025 :</b> BTS SIO option SLAM</div>
+        <div><b>Stage :</b> À venir</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Formation actuelle</h2>
+      <p>
+        Le BTS SIO (Services Informatiques aux Organisations) forme aux métiers de l’informatique.
+        L’option <b>SLAM</b> (Solutions Logicielles et Applications Métiers) est orientée développement :
+        programmation, conception, bases de données, tests, travail collaboratif.
+      </p>
+    </section>
+
+    <section>
+      <h2>Métiers visés</h2>
+      <ul>
+        <li>Développeur d’applications</li>
+        <li>Développeur web</li>
+        <li>Concepteur d’applications</li>
+      </ul>
+      <p>
+        👉 Voir ma <a href="docs/carte-heuristique.png" target="_blank">carte heuristique</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Compétences à terme de la formation</h2>
+      <ul>
+        <li>Langages : C#, PHP/HTML/CSS/JS, Java, Python</li>
+        <li>SGBD : MySQL, PostgreSQL, MongoDB</li>
+        <li>CMS : WordPress</li>
+        <li>Méthodes : UML, Merise, MVC</li>
+        <li>Outils : GitHub, SonarLint</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projets</h2>
+      <div class="projets" id="projets"></div>
+    </section>
+
+    <section>
+      <h2>Mon CV</h2>
+      <p>
+        📄 <a href="docs/canaple_matheo_cv.pdf" target="_blank">Télécharger mon CV</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Veille informationnelle</h2>
+      <ul>
+        <iframe src="https://www.pearltrees.com/math_2510?embed=2&d=20250923941" width="560" height="413" style="border:0px;" allowtransparency="true"></iframe><span style="display:block; padding-top:2px; color:#818181; font-size:13px;"><a href="https://www.pearltrees.com/math_2510" style=" color:#818181; font-size:13px;" target="_blank">Math_2510</a></span>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <form>
+        <input type="text" placeholder="Votre nom" required>
+        <input type="email" placeholder="Votre email" required>
+        <textarea placeholder="Votre message" rows="5" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+      <p>
+        Vous pouvez aussi me retrouver sur
+        <a href="https://www.linkedin.com/in/math%C3%A9o-canaple-a78168385?utm_source=share&utm_campaign=share_via&content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>.
+      </p>
+        <p>
+            ou par mail : matheocanaple@gmail.com
+        </p>
+    </section>
+  </main>
+
+
+  <footer>
+  © 2025 - Portfolio de Mathéo Canaple |
+  <a href="https://www.linkedin.com/in/math%C3%A9o-canaple-a78168385?utm_source=share&utm_campaign=share_via&content=profile&utm_medium=android_app" target="_blank">Mon LinkedIn</a>
+  </footer>
+
+  <script>
+    // Charger les projets depuis le JSON
+    fetch("projets.json")
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("projets");
+        data.forEach(projet => {
+          if (projet.titre !== "vide") {
+            const div = document.createElement("div");
+            div.className = "projet";
+            div.innerHTML = `<h3>${projet.titre}</h3>
+                             <p>${projet.description}</p>
+                             <a href="${projet.fichier}">Voir le projet</a>`;
+            container.appendChild(div);
+          }
+        });
+      });
+  </script>
+</body>
+</html>
